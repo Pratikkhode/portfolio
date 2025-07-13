@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Mail, Phone, MapPin, Download, ExternalLink, Github, Linkedin, Code, Cloud, Cpu, Database, Monitor, Award, Briefcase, User, FileText, Zap, Rocket, Globe, Shield, CpuIcon, Server } from 'lucide-react';
-
+import { ChevronDown, Mail, Phone, MapPin, Download, ExternalLink, Github, Linkedin, Code, Cloud, Cpu, Database, Monitor, Award, Briefcase, User, Zap, Rocket, Globe, Shield, CpuIcon, Server, FileText } from 'lucide-react';
+// import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 const AnimatedText = ({ text, delay = 0 }: { text: string; delay?: number }) => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -216,15 +216,15 @@ function App() {
         </div>
 
         <div className="relative text-center z-10 px-4">
-          <div className="mb-8">
+          {/* <div className="mb-8">
             <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-red-600 to-red-800 p-1 hover:scale-110 transition-transform duration-500 overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80" 
+                src="\src\assets\photo.jpg" 
                 alt="Pratik Khode - Cloud & DevOps Engineer"
                 className="w-full h-full rounded-full object-cover hover:scale-105 transition-transform duration-500"
               />
             </div>
-          </div>
+          </div> */}
           
           <AnimatedText 
             text="Hello, I am Pratik Khode" 
@@ -293,24 +293,62 @@ function App() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-24 px-4 bg-gray-900 section-hover">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-red-400 netflix-title hover:scale-110 transition-transform duration-500 section-header">About Me</h2>
-                      <div className="bg-black rounded-lg p-8 shadow-xl border border-red-500/20 enhanced-card-hover glow-border">
-            <p className="text-lg leading-relaxed mb-6 text-white hover:text-red-50 transition-colors duration-500">
-              I am a final-year B.E. student at Sandip Foundation College of Engineering with a strong interest in DevOps tools, cloud infrastructure, and AI-driven automation. 
-              I enjoy building scalable systems that eliminate manual processes and maximize efficiency.
-            </p>
-            <p className="text-lg leading-relaxed mb-6 text-white hover:text-red-50 transition-colors duration-500">
-              I have worked on a variety of projects that showcase my ability to containerize applications, automate deployments, and design smart tools using modern technologies like Docker, Jenkins, AWS, and Python.
-            </p>
-            <p className="text-lg leading-relaxed text-white hover:text-red-50 transition-colors duration-500">
-              I thrive in fast-paced environments where I can learn continuously, improve constantly, and deliver smart, functional solutions that make a real-world impact.
-            </p>
-          </div>
+     
+
+<section id="about" className="py-24 px-4 bg-gray-900 section-hover">
+  <div className="max-w-6xl mx-auto">
+    
+    {/* Title */}
+    <h2 className="text-4xl font-bold text-center mb-12 text-red-400 netflix-title hover:scale-110 transition-transform duration-500 section-header">
+      About Me
+    </h2>
+
+    {/* Main Flex Container */}
+    <div className="flex flex-col md:flex-row items-center md:items-stretch gap-10">
+      
+      {/* Left Side: Image + Icons */}
+      <div className="w-full md:w-1/2 flex flex-col items-center">
+        <div className="w-64 h-64 bg-gradient-to-br from-red-600 to-red-800 p-1 hover:scale-110 transition-transform duration-500 overflow-hidden rounded-lg shadow-lg">
+          <img 
+            src="\src\assets\photo.jpg" 
+            alt="Pratik Khode - Cloud & DevOps Engineer"
+            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+          />
         </div>
-      </section>
+
+        {/* Social Icons */}
+        <div className="flex space-x-6 mt-6">
+          <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:text-white text-2xl transition-colors duration-300">
+            <Linkedin />
+          </a>
+          <a href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:text-white text-2xl transition-colors duration-300">
+            <Github />
+          </a>
+          {/* <a href="https://instagram.com/YOUR_INSTA" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:text-white text-2xl transition-colors duration-300">
+            <Instagram />
+          </a> */}
+        </div>
+      </div>
+
+      {/* Right Side: Text Content */}
+      <div className="w-full md:w-1/2 bg-black rounded-lg p-8 shadow-xl border border-red-500/20 enhanced-card-hover glow-border">
+        <p className="text-lg leading-relaxed mb-6 text-white hover:text-red-50 transition-colors duration-500">
+          I am a final-year B.E. student at Sandip Foundation College of Engineering with a strong interest in DevOps tools, cloud infrastructure, and AI-driven automation. 
+          I enjoy building scalable systems that eliminate manual processes and maximize efficiency.
+        </p>
+        <p className="text-lg leading-relaxed mb-6 text-white hover:text-red-50 transition-colors duration-500">
+          I have worked on a variety of projects that showcase my ability to containerize applications, automate deployments, and design smart tools using modern technologies like Docker, Jenkins, AWS, and Python.
+        </p>
+        <p className="text-lg leading-relaxed text-white hover:text-red-50 transition-colors duration-500">
+          I thrive in fast-paced environments where I can learn continuously, improve constantly, and deliver smart, functional solutions that make a real-world impact.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 
       {/* Skills Section */}
       <section id="skills" className="py-24 px-4 bg-black section-hover">

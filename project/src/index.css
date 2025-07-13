@@ -5,6 +5,7 @@
 /* Netflix Theme Styles */
 .netflix-theme {
   font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: #0a0a0a;
 }
 
 .netflix-title {
@@ -14,10 +15,12 @@
 
 .netflix-button {
   box-shadow: 0 4px 14px 0 rgba(220, 38, 38, 0.39);
+  background: linear-gradient(90deg, #1a1a1a 60%, #dc2626 100%);
 }
 
 .netflix-button:hover {
   box-shadow: 0 6px 20px rgba(220, 38, 38, 0.6);
+  background: linear-gradient(90deg, #111111 60%, #b91c1c 100%);
 }
 
 /* Geometric Intro Animations */
@@ -780,6 +783,7 @@ html {
   overflow: hidden;
   border: 2px solid transparent;
   border-radius: 12px;
+  background: #18181b;
 }
 
 .section-hover::before {
@@ -816,6 +820,7 @@ html {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
+  background: #18181b !important;
 }
 
 .enhanced-card-hover::before {
@@ -903,7 +908,7 @@ html {
 
 /* World-Class Professional Background Effects */
 .professional-bg {
-  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+  background: linear-gradient(135deg, #0a0a0a 0%, #18181b 50%, #0a0a0a 100%);
   position: relative;
   overflow: hidden;
 }
@@ -1016,4 +1021,8 @@ html {
 
 .section-header:hover::after {
   width: 100%;
+}
+
+.bg-black, .bg-gray-900 {
+  background: #111111 !important;
 }
