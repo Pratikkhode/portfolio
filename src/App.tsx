@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Mail, Phone, MapPin, Download, ExternalLink, Github, Linkedin, Code, Cloud, Cpu, Database, Monitor, Award, Briefcase, User, Zap, Rocket, Globe, Shield, CpuIcon, Server, FileText } from 'lucide-react';
+import photo from './assets/photo.jpg';
 // import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 const AnimatedText = ({ text, delay = 0 }: { text: string; delay?: number }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -219,7 +220,7 @@ function App() {
           {/* <div className="mb-8">
             <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-red-600 to-red-800 p-1 hover:scale-110 transition-transform duration-500 overflow-hidden">
               <img 
-                src="\src\assets\photo.jpg" 
+                src={photo} 
                 alt="Pratik Khode - Cloud & DevOps Engineer"
                 className="w-full h-full rounded-full object-cover hover:scale-105 transition-transform duration-500"
               />
@@ -310,7 +311,7 @@ function App() {
       <div className="w-full md:w-1/2 flex flex-col items-center">
         <div className="w-64 h-64 bg-gradient-to-br from-red-600 to-red-800 p-1 hover:scale-110 transition-transform duration-500 overflow-hidden rounded-lg shadow-lg">
           <img 
-            src="\src\assets\photo.jpg" 
+            src={photo} 
             alt="Pratik Khode - Cloud & DevOps Engineer"
             className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
           />
