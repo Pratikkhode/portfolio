@@ -64,6 +64,18 @@ const CertCard = ({ title, issuer }: { title: string; issuer: string }) => (
 function App() {
   const [showIntro, setShowIntro] = useState(true);
   const [currentSection, setCurrentSection] = useState('hero');
+  const [error, setError] = useState<string | null>(null);
+
+  // Error boundary for debugging
+  useEffect(() => {
+    const handleError = (event: ErrorEvent) => {
+      console.error('App Error:', event.error);
+      setError(event.error?.message || 'An error occurred');
+    };
+
+    window.addEventListener('error', handleError);
+    return () => window.removeEventListener('error', handleError);
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -174,6 +186,23 @@ function App() {
             <div className="sound-bar"></div>
             <div className="sound-bar"></div>
           </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen bg-black text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl text-red-500 mb-4">Error Loading Portfolio</h1>
+          <p className="text-gray-300 mb-4">{error}</p>
+          <button 
+            onClick={() => window.location.reload()} 
+            className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+          >
+            Reload Page
+          </button>
         </div>
       </div>
     );
