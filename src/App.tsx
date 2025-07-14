@@ -119,10 +119,11 @@ function App() {
         {/* Main Content */}
         <div className="text-center relative z-10">
           {/* Geometric Triangle Shape */}
-          <div className="relative mb-12 flex items-center justify-center">
-            <div className="geometric-container-professional">
+          {/* Loading screen geometric triangle and name centering */}
+          <div className="relative flex items-center justify-center">
+            <div className="geometric-container-professional" style={{ width: '100%', maxWidth: 500, height: 375, position: 'relative' }}>
               {/* Animated Triangle Lines */}
-              <svg width="500" height="375" viewBox="0 0 500 375" className="absolute inset-0 md:w-[500px] md:h-[375px] w-[350px] h-[262px] sm:w-[280px] sm:h-[210px]">
+              <svg width="100%" height="100%" viewBox="0 0 500 375" className="absolute inset-0 w-full h-full">
                 <path 
                   d="M250 60 L437 312 L63 312 Z" 
                   fill="none" 
@@ -142,8 +143,7 @@ function App() {
                   className="triangle-path-inner"
                 />
               </svg>
-              
-              {/* Name Positioning - Emerging from Triangle with Professional Animation */}
+              {/* Name Positioning - Centered in Triangle */}
               <div className="absolute inset-0 flex flex-col items-center justify-center">
                 <div className="name-emerging-container">
                   <div className="triangle-gateway"></div>
@@ -220,7 +220,7 @@ function App() {
       {/* Improved Navigation/Header */}
       <nav className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-lg border-b border-red-500 shadow-xl rounded-b-xl px-4 py-3 md:px-8 md:py-4 flex justify-center">
         <div className="flex flex-wrap md:flex-nowrap space-x-2 md:space-x-4 text-xs md:text-sm">
-          {['hero', 'about', 'skills', 'projects', 'experience', 'certifications', 'contact'].map((section) => (
+          {['Home', 'projects', 'experience', 'certifications', 'contact'].map((section) => (
             <a
               key={section}
               href={`#${section}`}
@@ -235,7 +235,7 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden px-2 sm:px-4 md:px-8 mt-20 md:mt-24">
+      <section id="Home" className="min-h-screen flex items-center justify-center relative overflow-hidden px-2 sm:px-4 md:px-8 mt-20 md:mt-24">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
         
         {/* Netflix-style Background Elements */}
