@@ -217,25 +217,25 @@ function App() {
               </div>
       </div>
 
-      {/* Navigation */}
-              <nav className="fixed top-2 right-2 z-50 bg-black/90 backdrop-blur-sm rounded-lg p-1 md:p-2 border border-red-500 shadow-lg">
-          <div className="flex flex-wrap md:flex-nowrap space-x-2 md:space-x-4 text-xs md:text-sm">
-            {['hero', 'about', 'skills', 'projects', 'experience', 'certifications', 'contact'].map((section) => (
-              <a
-                key={section}
-                href={`#${section}`}
-                className={`px-2 py-1 md:px-3 md:py-2 rounded transition-all duration-300 hover:scale-110 ${
-                  currentSection === section ? 'bg-red-500 text-white' : 'text-white hover:text-red-400 hover:bg-red-50/10'
-                }`}
-              >
-                {section.charAt(0).toUpperCase() + section.slice(1)}
-              </a>
-            ))}
-          </div>
-        </nav>
+      {/* Improved Navigation/Header */}
+      <nav className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-lg border-b border-red-500 shadow-xl rounded-b-xl px-4 py-3 md:px-8 md:py-4 flex justify-center">
+        <div className="flex flex-wrap md:flex-nowrap space-x-2 md:space-x-4 text-xs md:text-sm">
+          {['hero', 'about', 'skills', 'projects', 'experience', 'certifications', 'contact'].map((section) => (
+            <a
+              key={section}
+              href={`#${section}`}
+              className={`px-2 py-1 md:px-3 md:py-2 rounded transition-all duration-300 hover:scale-110 font-semibold tracking-wide ${
+                currentSection === section ? 'bg-red-500 text-white shadow-md' : 'text-white hover:text-red-400 hover:bg-red-50/10'
+              }`}
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </a>
+          ))}
+        </div>
+      </nav>
 
       {/* Hero Section */}
-      <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden px-2 sm:px-4 md:px-8">
+      <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden px-2 sm:px-4 md:px-8 mt-20 md:mt-24">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
         
         {/* Netflix-style Background Elements */}
