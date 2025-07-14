@@ -218,13 +218,13 @@ function App() {
       </div>
 
       {/* Navigation */}
-              <nav className="fixed top-4 right-4 z-50 bg-black/90 backdrop-blur-sm rounded-lg p-2 border border-red-500 shadow-lg">
-          <div className="flex space-x-4 text-sm">
+              <nav className="fixed top-2 right-2 z-50 bg-black/90 backdrop-blur-sm rounded-lg p-1 md:p-2 border border-red-500 shadow-lg">
+          <div className="flex flex-wrap md:flex-nowrap space-x-2 md:space-x-4 text-xs md:text-sm">
             {['hero', 'about', 'skills', 'projects', 'experience', 'certifications', 'contact'].map((section) => (
               <a
                 key={section}
                 href={`#${section}`}
-                className={`px-3 py-2 rounded transition-all duration-300 hover:scale-110 ${
+                className={`px-2 py-1 md:px-3 md:py-2 rounded transition-all duration-300 hover:scale-110 ${
                   currentSection === section ? 'bg-red-500 text-white' : 'text-white hover:text-red-400 hover:bg-red-50/10'
                 }`}
               >
@@ -235,7 +235,7 @@ function App() {
         </nav>
 
       {/* Hero Section */}
-      <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden px-2 sm:px-4 md:px-8">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
         
         {/* Netflix-style Background Elements */}
@@ -245,7 +245,7 @@ function App() {
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-red-600 rounded-full animate-pulse"></div>
         </div>
 
-        <div className="relative text-center z-10 px-4">
+        <div className="relative text-center z-10 px-2 sm:px-4">
           {/* <div className="mb-8">
             <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-red-600 to-red-800 p-1 hover:scale-110 transition-transform duration-500 overflow-hidden">
               <img 
@@ -260,7 +260,7 @@ function App() {
             text="Hello, I am Pratik Khode" 
             delay={100}
           />
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 netflix-title text-white hover:text-red-400 transition-colors duration-500">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mb-6 netflix-title text-white hover:text-red-400 transition-colors duration-500">
             <AnimatedText 
               text="Building the Future with Cloud & DevOps" 
               delay={200}
@@ -274,14 +274,14 @@ function App() {
             />
           </div>
           
-          <p className="text-xl md:text-2xl text-red-400 italic mb-8 border-b-2 border-red-400 inline-block pb-2 font-medium hover:text-red-300 hover:border-red-300 transition-all duration-500">
+          <p className="text-base sm:text-xl md:text-2xl text-red-400 italic mb-8 border-b-2 border-red-400 inline-block pb-2 font-medium hover:text-red-300 hover:border-red-300 transition-all duration-500">
             <AnimatedText 
               text="Automating ideas into deployable, scalable, and intelligent solutions with Cloud and DevOps." 
               delay={400}
             />
           </p>
           
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8">
             {[
               { text: 'View My Projects', icon: <Code className="w-5 h-5" /> },
               { text: 'Download Resume', icon: <Download className="w-5 h-5" /> },
@@ -299,7 +299,7 @@ function App() {
             ))}
           </div>
           
-          <div className="flex justify-center space-x-6">
+          <div className="flex justify-center space-x-4 sm:space-x-6">
             {[
               { icon: <Linkedin className="w-6 h-6" />, label: 'LinkedIn' },
               { icon: <Github className="w-6 h-6" />, label: 'GitHub' },
@@ -325,20 +325,20 @@ function App() {
 
      
 
-<section id="about" className="py-24 px-4 bg-gray-900 section-hover">
+<section id="about" className="py-16 sm:py-24 px-2 sm:px-4 md:px-8 bg-gray-900 section-hover">
   <div className="max-w-6xl mx-auto">
     
     {/* Title */}
-    <h2 className="text-4xl font-bold text-center mb-12 text-red-400 netflix-title hover:scale-110 transition-transform duration-500 section-header">
+    <h2 className="text-2xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-red-400 netflix-title hover:scale-110 transition-transform duration-500 section-header">
       About Me
     </h2>
 
     {/* Main Flex Container */}
-    <div className="flex flex-col md:flex-row items-center md:items-stretch gap-10">
+    <div className="flex flex-col md:flex-row items-center md:items-stretch gap-6 md:gap-10">
       
       {/* Left Side: Image + Icons */}
-      <div className="w-full md:w-1/2 flex flex-col items-center">
-        <div className="w-64 h-64 bg-gradient-to-br from-red-600 to-red-800 p-1 hover:scale-110 transition-transform duration-500 overflow-hidden rounded-lg shadow-lg">
+      <div className="w-full md:w-1/2 flex flex-col items-center mb-6 md:mb-0">
+        <div className="w-40 h-40 sm:w-64 sm:h-64 bg-gradient-to-br from-red-600 to-red-800 p-1 hover:scale-110 transition-transform duration-500 overflow-hidden rounded-lg shadow-lg">
           <img 
             src={photo} 
             alt="Pratik Khode - Cloud & DevOps Engineer"
@@ -347,7 +347,7 @@ function App() {
         </div>
 
         {/* Social Icons */}
-        <div className="flex space-x-6 mt-6">
+        <div className="flex space-x-4 sm:space-x-6 mt-4 sm:mt-6">
           <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:text-white text-2xl transition-colors duration-300">
             <Linkedin />
           </a>
@@ -361,15 +361,15 @@ function App() {
       </div>
 
       {/* Right Side: Text Content */}
-      <div className="w-full md:w-1/2 bg-black rounded-lg p-8 shadow-xl border border-red-500/20 enhanced-card-hover glow-border">
-        <p className="text-lg leading-relaxed mb-6 text-white hover:text-red-50 transition-colors duration-500">
+      <div className="w-full md:w-1/2 bg-black rounded-lg p-4 sm:p-8 shadow-xl border border-red-500/20 enhanced-card-hover glow-border">
+        <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6 text-white hover:text-red-50 transition-colors duration-500">
           I am a final-year B.E. student at Sandip Foundation College of Engineering with a strong interest in DevOps tools, cloud infrastructure, and AI-driven automation. 
           I enjoy building scalable systems that eliminate manual processes and maximize efficiency.
         </p>
-        <p className="text-lg leading-relaxed mb-6 text-white hover:text-red-50 transition-colors duration-500">
+        <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6 text-white hover:text-red-50 transition-colors duration-500">
           I have worked on a variety of projects that showcase my ability to containerize applications, automate deployments, and design smart tools using modern technologies like Docker, Jenkins, AWS, and Python.
         </p>
-        <p className="text-lg leading-relaxed text-white hover:text-red-50 transition-colors duration-500">
+        <p className="text-base sm:text-lg leading-relaxed text-white hover:text-red-50 transition-colors duration-500">
           I thrive in fast-paced environments where I can learn continuously, improve constantly, and deliver smart, functional solutions that make a real-world impact.
         </p>
       </div>
@@ -381,10 +381,10 @@ function App() {
 
 
       {/* Skills Section */}
-      <section id="skills" className="py-24 px-4 bg-black section-hover">
+      <section id="skills" className="py-16 sm:py-24 px-2 sm:px-4 md:px-8 bg-black section-hover">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-red-400 netflix-title hover:scale-110 transition-transform duration-500 section-header">Skills</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <h2 className="text-2xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-red-400 netflix-title hover:scale-110 transition-transform duration-500 section-header">Skills</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
             {[
               { skill: 'Java', icon: <Code className="w-8 h-8" /> },
               { skill: 'Python', icon: <Code className="w-8 h-8" /> },
@@ -406,10 +406,10 @@ function App() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-24 px-4 bg-gray-900 section-hover">
+      <section id="projects" className="py-16 sm:py-24 px-2 sm:px-4 md:px-8 bg-gray-900 section-hover">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-red-500 netflix-title hover:scale-110 transition-transform duration-500 section-header">Projects</h2>
-          <div className="space-y-8">
+          <h2 className="text-2xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-red-500 netflix-title hover:scale-110 transition-transform duration-500 section-header">Projects</h2>
+          <div className="space-y-6 sm:space-y-8">
             {[
               {
                 title: "AI-Powered MCQ Game using Gemini & Docker",
@@ -444,10 +444,10 @@ function App() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-24 px-4 bg-black section-hover">
+      <section id="experience" className="py-16 sm:py-24 px-2 sm:px-4 md:px-8 bg-black section-hover">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-red-500 netflix-title hover:scale-110 transition-transform duration-500 section-header">Experience</h2>
-          <div className="space-y-8">
+          <h2 className="text-2xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-red-500 netflix-title hover:scale-110 transition-transform duration-500 section-header">Experience</h2>
+          <div className="space-y-6 sm:space-y-8">
             {[
               {
                 role: "DevOps & Full Stack Intern",
@@ -481,10 +481,10 @@ function App() {
       </section>
 
       {/* Certifications Section */}
-      <section id="certifications" className="py-24 px-4 bg-gray-900 section-hover">
+      <section id="certifications" className="py-16 sm:py-24 px-2 sm:px-4 md:px-8 bg-gray-900 section-hover">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-red-500 netflix-title hover:scale-110 transition-transform duration-500 section-header">Certifications</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <h2 className="text-2xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-red-500 netflix-title hover:scale-110 transition-transform duration-500 section-header">Certifications</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {[
               { title: "AWS Certified Cloud Practitioner", issuer: "Amazon" },
               { title: "Linux World MultiTech Certificate", issuer: "Linux World" },
@@ -499,11 +499,11 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 px-4 bg-black section-hover">
+      <section id="contact" className="py-16 sm:py-24 px-2 sm:px-4 md:px-8 bg-black section-hover">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-red-500 netflix-title hover:scale-110 transition-transform duration-500 section-header">Contact</h2>
-          <div className="bg-black rounded-lg p-8 shadow-xl border border-red-500/20 enhanced-card-hover glow-border">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <h2 className="text-2xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-red-500 netflix-title hover:scale-110 transition-transform duration-500 section-header">Contact</h2>
+          <div className="bg-black rounded-lg p-4 sm:p-8 shadow-xl border border-red-500/20 enhanced-card-hover glow-border">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8 text-center">
               <div className="flex flex-col items-center space-y-3 hover:scale-110 transition-transform duration-500">
                 <Mail className="w-8 h-8 text-red-500 hover:text-red-400 transition-colors duration-500" />
                 <h3 className="text-white font-semibold">Email</h3>
@@ -523,14 +523,14 @@ function App() {
           </div>
           
           {/* Resume Section */}
-          <div className="mt-12 text-center">
-            <div className="bg-black border border-red-500 rounded-lg p-6 inline-block shadow-lg hover:border-red-400 hover:shadow-2xl hover:shadow-red-500/40 hover:scale-105 transition-all duration-500">
-              <h3 className="text-white text-xl font-bold mb-4 flex items-center justify-center space-x-2">
-                <FileText className="w-6 h-6 text-red-500" />
+          <div className="mt-8 sm:mt-12 text-center">
+            <div className="bg-black border border-red-500 rounded-lg p-4 sm:p-6 inline-block shadow-lg hover:border-red-400 hover:shadow-2xl hover:shadow-red-500/40 hover:scale-105 transition-all duration-500">
+              <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-4 flex items-center justify-center space-x-2">
+                <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-red-500" />
                 <span>Resume</span>
               </h3>
-              <button className="bg-red-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-600 hover:scale-110 hover:shadow-2xl hover:shadow-red-500/50 transition-all duration-500 transform flex items-center space-x-2 netflix-button">
-                <Download className="w-5 h-5" />
+              <button className="bg-red-500 text-white px-4 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-red-600 hover:scale-110 hover:shadow-2xl hover:shadow-red-500/50 transition-all duration-500 transform flex items-center space-x-2 netflix-button">
+                <Download className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>Download My Resume (PDF)</span>
               </button>
             </div>
@@ -539,9 +539,9 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-red-500 py-8 px-4 hover:bg-red-600 transition-colors duration-500">
+      <footer className="bg-red-500 py-4 sm:py-8 px-2 sm:px-4 hover:bg-red-600 transition-colors duration-500">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-white hover:scale-105 transition-transform duration-500">
+          <p className="text-white hover:scale-105 transition-transform duration-500 text-xs sm:text-base">
             © 2025 Pratik Khode. Building the future with Cloud and DevOps.
           </p>
         </div>
